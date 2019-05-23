@@ -9,16 +9,23 @@ class EmailsController < ApplicationController
 
   def show
 
+    @email_found = Email.find(params[:id])
+    respond_to do |format|
+      format.html { redirect_to show_path }
+      format.js { redirect_to root_path }
+end
   end
 
   def create 
-    @email = Email.new(email_params)
+    @email = Email.new(
+      object: Faker::Lorem.sentence(3),
+      body: Faker::Lorem.paragraph(2))
 
     if @email.save
-      # respond_to do |format|
-      #   format.html { redirect_to root_path }
-      #   format.js { }
-      # end
+      respond_to do |format|
+        format.html { redirect_to root_path }
+        format.js { }
+      end
       redirect_to root_path
       flash[:notice] = "Email créé"
     else

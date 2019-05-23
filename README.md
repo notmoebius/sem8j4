@@ -1,24 +1,9 @@
-# README
+# Projet Gmail-like
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Dernier projet réalisé avec :purple_heart: à Toulouse
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
+* lien: [gmail like](https://email-ajax31.herokuapp.com/)
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
