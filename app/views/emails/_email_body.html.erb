@@ -4,8 +4,9 @@
 		<div class="col p-3">
 			<h4><%= @email.object %></h4>
 			<p class="text-justify"><%= @email.body %></p>
-			<%= link_to "Supprimer", "#", remote: false, class: "btn btn-sm btn-danger" %>               
+			<%= link_to "Supprimer", email_path(@email.id), data: {confirm:'Etes-vous sûr ?'}, method: 'delete', remote: true, class: "btn btn-sm btn-danger" %>               
 			<%= link_to "Marqué non-lu", "#", remote: false, class: "btn btn-sm btn-info" %>               
 		</div>
 	</div>
 </div>
+

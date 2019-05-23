@@ -40,6 +40,14 @@ end
   end
 
   def destroy
+    @email = Email.find(params[:id])
+    @email.destroy  
+    #@emails = Email.all.reverse 	
+
+    respond_to do |format|
+      format.html { redirect_to root_path }
+      format.js { }
+    end
 
   end
 
