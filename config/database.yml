@@ -81,5 +81,4 @@ test:
 production:
   <<: *default
   database: todolist-app_production
-  username: postgres
 
