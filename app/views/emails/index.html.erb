@@ -14,8 +14,12 @@
       <tbody>
           <tr id="emails">
             <% @emails.each do |email| %>
-            <td><%= email.object%></td>
-            <td><%= email.body%></td>
+            <td>
+              <%= link_to email.object, email_path(email.id), method: "get", remote: true %>
+            </td>
+            <td id="body-<%= email.id %>">
+              <%= email.body%> 
+            </td>
           </tr>
           <% end %>
       </tbody>

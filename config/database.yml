@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: todolist-app_production
-  username: todolist-app
-  password: <%= ENV['TODOLIST-APP_DATABASE_PASSWORD'] %>
+  username: postgres
+

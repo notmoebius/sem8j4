@@ -9,10 +9,15 @@ class EmailsController < ApplicationController
 
   def show
 
-    @email_found = Email.find(params[:id])
+    @email = Email.find(params[:id])
+    puts "********************"
+    puts @email.id
+    puts @email.object
+    puts @email.body
+    puts "********************"
     respond_to do |format|
-      format.html { redirect_to show_path }
-      format.js { redirect_to root_path }
+      format.html { redirect_to show_path(@email.id) }
+      format.js { }
 end
   end
 
@@ -30,7 +35,7 @@ end
       flash[:notice] = "Email créé"
     else
       redirect_to root_path
-      flash[:notice] = "Please try again"
+      flash[:notice] = "Oups, erreur à la création"
     end
   end
 

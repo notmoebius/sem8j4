@@ -1,0 +1,11 @@
+<!-- div affichant le contenu -->
+<div class="container" id="body-mail">
+	<div class="row">
+		<div class="col p-3">
+			<h4><%= @email.object %></h4>
+			<p class="text-justify"><%= @email.body %></p>
+			<%= link_to "Supprimer", "#", remote: false, class: "btn btn-sm btn-danger" %>               
+			<%= link_to "Marqué non-lu", "#", remote: false, class: "btn btn-sm btn-info" %>               
+		</div>
+	</div>
+</div>
