@@ -1,11 +1,5 @@
 // Je récupère l'id de l'objet du message
-<% @email = params[:id] %>
-console.log('body-' + <%= @email %>);
-var mailChoosen = document.getElementById('body-' + <%= @email %>);
-console.log(mailChoosen);
+<% email = params[:id] %>
+var mailChoosen = document.getElementById('body-' + <%= email %>);
 
-let emailJs = document.getElementsByClassName("email_content")[0]
-let emailJsName = mailChoosen = document.getElementById('body-' + <%= @email %>);
-emailJs.insertAdjacentHTML("beforeend", "contenu du message");
-
-emailJsName.insertAdjacentHTML("beforeend", "Message test deux");
+mailChoosen.innerHTML = "<%= j render 'email_body', email: @email %>"
